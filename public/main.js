@@ -10,19 +10,17 @@ function createWindow() {
         width: 360,
         height: 600,
         useContentSize: true,
-        frame:false
+        frame:false,
+        webPreferences:{
+            nodeIntegration:true,
+            preload: path.join(__dirname, '/public/preload.js')
+        }
     })
     //mainWindow.loadFile('index.html')
     if (isDev) {
         mainWindow.loadURL('http://localhost:3000/')
-        mainWindow.webPreferences={
-            preload: path.join(__dirname, '/src/index.js')
-        }
     } else {
         mainWindow.loadFile(path.join(__dirname, '/../build/index.html'))
-        mainWindow.webPreferences={
-            preload: path.join(__dirname, '/../build/js/index.js')
-        }
     }
     mainWindow.webContents.openDevTools()
     mainWindow.on('closed', function () {
