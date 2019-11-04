@@ -14,7 +14,7 @@
     "react-scripts": "3.2.0"
   },
   "scripts": {
-    "electron-dev": "concurrently \"react-app-rewired start\" \"wait-on http://localhost:3000&&electron .\"",
+    "electron-dev": "concurrently \"SET BROWSER=none&&react-app-rewired start\" \"wait-on http://localhost:3000&&electron .\"",
     "start": "react-app-rewired start",
     "build": "react-app-rewired start",
     "test": "react-app-rewired test",

@@ -1,9 +1,13 @@
+const electron = window.require('electron');
 import React from 'react';
 import {Icon} from 'antd';
 import './Header.css'
 class Header extends React.Component {
     constructor(props) {
         super(props)
+    }
+    minWindow(){
+        console.log(window.electron)
     }
     render() {
         return (
@@ -13,7 +17,9 @@ class Header extends React.Component {
                 </div>
                 <div className="Header-header-item">
                     <ul className="Header-header-tools">
-                        <li> <Icon type="minus" /></li>
+                        <li> <Icon type="minus" onClick={()=>{
+                            this.minWindow()
+                        }}/></li>
                         <li> <Icon type="plus" /></li>
                         <li><Icon type="close" /></li>
                     </ul>

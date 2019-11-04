@@ -1,34 +1,36 @@
 .Header-header {
     background-color: #282B3D;
-    height:50px;
+    height:36px;
     display: flex;
     flex-direction: row;
     justify-content:space-between;
     font-size: 14px;
     color: white;
-    -webkit-app-region: drag;
+    align-items: center;
   }  
   .Header-header-item{
     display: inline-block;
     
   }
   .Header-title{
-    line-height: 50px;
-    text-indent: 10px;
+    padding-left: 10px;
     font-size: 18px;
+    -webkit-app-region: drag;
   }
   .Header-header-tools::after{
+    display: block;
     content: '';
-    width: 0;
+    height: 0;
     clear: both;
   }
   .Header-header-tools li{
     float: left;
     list-style: none;
-    width: 34px;
-    line-height: 28px;
-    height: 28px;
+    width: 32px;
+    line-height: 32px;
+    height: 32px;
     cursor: pointer;
+    font-size: 13px;
   }
   .Header-header-tools li:hover{
     background: #000;
