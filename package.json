@@ -1,0 +1,48 @@
+{
+  "name": "mtcistern",
+  "version": "0.1.0",
+  "private": true,
+  "main": "public/main.js",
+  "dependencies": {
+    "antd": "^3.24.3",
+    "babel-plugin-import": "^1.12.2",
+    "customize-cra": "^0.8.0",
+    "electron-is-dev": "^1.1.0",
+    "react": "^16.11.0",
+    "react-app-rewired": "^2.1.4",
+    "react-dom": "^16.11.0",
+    "react-scripts": "3.2.0"
+  },
+  "scripts": {
+    "electron-dev": "concurrently \"react-app-rewired start\" \"wait-on http://localhost:3000&&electron .\"",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired start",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "rules": [
+      {
+        "no-useless-constructor": "off"
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "electron": "^7.0.0",
+    "wait-on": "^3.3.0"
+  }
+}

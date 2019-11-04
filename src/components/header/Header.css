@@ -1,0 +1,35 @@
+.Header-header {
+    background-color: #282B3D;
+    height:50px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    font-size: 14px;
+    color: white;
+    -webkit-app-region: drag;
+  }  
+  .Header-header-item{
+    display: inline-block;
+    
+  }
+  .Header-title{
+    line-height: 50px;
+    text-indent: 10px;
+    font-size: 18px;
+  }
+  .Header-header-tools::after{
+    content: '';
+    width: 0;
+    clear: both;
+  }
+  .Header-header-tools li{
+    float: left;
+    list-style: none;
+    width: 34px;
+    line-height: 28px;
+    height: 28px;
+    cursor: pointer;
+  }
+  .Header-header-tools li:hover{
+    background: #000;
+  }
