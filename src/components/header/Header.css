@@ -1,37 +1,36 @@
 .Header-header {
-    background-color: #282B3D;
-    height:36px;
+    background-color: #000;
+    height:30px;
     display: flex;
     flex-direction: row;
     justify-content:space-between;
-    font-size: 14px;
+    font-size: 13px;
     color: white;
     align-items: center;
   }  
   .Header-header-item{
     display: inline-block;
-    
+  }
+  .Header-header-item:first-child{
+    flex: 1;
+    -webkit-app-region: drag;
+    text-align: left;
   }
   .Header-title{
     padding-left: 10px;
-    font-size: 18px;
-    -webkit-app-region: drag;
+    font-size: 16px;
   }
-  .Header-header-tools::after{
-    display: block;
-    content: '';
-    height: 0;
-    clear: both;
+  .Header-header-tools{
+    display: flex;
+    justify-content: end;
+    margin: 0;
+    padding: 0;
   }
   .Header-header-tools li{
-    float: left;
     list-style: none;
-    width: 32px;
-    line-height: 32px;
-    height: 32px;
-    cursor: pointer;
-    font-size: 13px;
+    width: 36px;
+    line-height: 30px;
   }
   .Header-header-tools li:hover{
-    background: #000;
+    background: #333;
   }

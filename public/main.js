@@ -13,7 +13,7 @@ function createWindow() {
         frame:false,
         webPreferences:{
             nodeIntegration:true,
-            preload: path.join(__dirname, '/public/preload.js')
+            preload: path.join(__dirname, '/preload.js')
         }
     })
     //mainWindow.loadFile('index.html')

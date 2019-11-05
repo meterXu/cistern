@@ -1,13 +1,33 @@
-const electron = window.require('electron');
 import React from 'react';
 import {Icon} from 'antd';
 import './Header.css'
+const remote = window.require("electron").remote;
 class Header extends React.Component {
     constructor(props) {
         super(props)
+        this.currentWindow=remote.getCurrentWindow()
+        this.state={
+            maximizeIcon:'border'
+        }
     }
-    minWindow(){
-        console.log(window.electron)
+    minimize(){
+        this.currentWindow.minimize()
+    }
+    maximize(){
+        if(this.currentWindow.isMaximized()){
+            this.currentWindow.unmaximize()
+            this.setState({
+                maximizeIcon:'border'
+            })
+        }else{
+            this.currentWindow.maximize()
+            this.setState({
+                maximizeIcon:'switcher'
+            })
+        }
+    }
+    closeWindow(){
+        this.currentWindow.close()
     }
     render() {
         return (
@@ -17,11 +37,15 @@ class Header extends React.Component {
                 </div>
                 <div className="Header-header-item">
                     <ul className="Header-header-tools">
-                        <li> <Icon type="minus" onClick={()=>{
-                            this.minWindow()
-                        }}/></li>
-                        <li> <Icon type="plus" /></li>
-                        <li><Icon type="close" /></li>
+                        <li onClick={()=>{
+                            this.minimize()
+                        }}> <Icon type="minus"/></li>
+                        <li onClick={()=>{
+                            this.maximize()
+                        }}> <Icon type={this.state.maximizeIcon} /></li>
+                        <li onClick={()=>{
+                            this.closeWindow()
+                        }}><Icon type="close" /></li>
                     </ul>
                 </div>
             </header>
