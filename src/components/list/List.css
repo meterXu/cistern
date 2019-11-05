@@ -1,0 +1,41 @@
+.listMain{
+    margin:0;
+    min-height: 300px;
+    position: fixed;
+    top: 30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+.list-ul li{
+    height: 100px;
+    line-height: 100px;
+    margin-top: 10px;
+    margin-left: 6px;
+    margin-right: 6px;
+    background: #282B3D;
+    color: #fff;
+    border-radius: 2px;
+}
+.list-ul li+li{
+    margin-top: 12px;
+}
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+    width:5px;
+    }
+    /* 滚动槽 */
+    ::-webkit-scrollbar-track {
+    -webkit-box-shadow:inset006pxrgba(0,0,0,0.3);
+    border-radius:5px;
+    }
+    /* 滚动条滑块 */
+    ::-webkit-scrollbar-thumb {
+    border-radius:5px;
+    background:rgba(0,0,0,0.1);
+    -webkit-box-shadow:inset006pxrgba(0,0,0,0.5);
+    }
+    ::-webkit-scrollbar-thumb:window-inactive {
+    background:rgba(225,225,225,0.4);
+    }
