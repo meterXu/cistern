@@ -8,17 +8,16 @@
     right: 0;
     overflow: auto;
 }
-.list-ul li{
-    height: 100px;
-    line-height: 100px;
-    margin-top: 10px;
-    margin-left: 6px;
+.list-ul>li{
+    height: 125px;
+    margin-top: 16px;
+    margin-left: 8px;
     margin-right: 6px;
     background: #282B3D;
     color: #fff;
     border-radius: 2px;
 }
-.list-ul li+li{
+.list-ul> li+li{
     margin-top: 12px;
 }
 /* 设置滚动条的样式 */

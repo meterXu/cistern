@@ -1,6 +1,6 @@
 import React from 'react';
-import {Icon} from 'antd';
 import './List.css'
+import ListContainer from "../ListContainer";
 class List extends React.Component {
     constructor(props) {
         super(props)
@@ -9,14 +9,15 @@ class List extends React.Component {
         return (
             <main className="listMain">
                 <ul className="list-ul">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>4</li>
-                    <li>4</li>
-                    <li>4</li>
-                    <li>4</li>
+                    <li>
+                        <ListContainer/>
+                    </li>
+                    <li>
+                        <ListContainer/>
+                    </li>
+                    <li>
+                        <ListContainer/>
+                    </li>
                 </ul>
             </main>
         )
