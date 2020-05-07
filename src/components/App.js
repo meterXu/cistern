@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 import Header from './Header/Header'
-import List from './List/List'
+import Index from './List'
 function App() {
   return (
     <div className="App">
       <Header></Header>
-      <List></List>
+      <Index></Index>
     </div>
   );
 }

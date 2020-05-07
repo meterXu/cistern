@@ -1,7 +1,7 @@
 import React from 'react';
-import './List.css'
+import './index.css'
 import ListContainer from "../ListContainer";
-class List extends React.Component {
+class Index extends React.Component {
     constructor(props) {
         super(props)
     }
@@ -23,4 +23,4 @@ class List extends React.Component {
         )
     }
 }
-export default List
+export default Index
